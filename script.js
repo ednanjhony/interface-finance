@@ -43,7 +43,7 @@ const Modal = {
     incomes() {
       let income = 0;
         
-      (transaction => {
+      Transaction.all.forEach(transaction => {
         if(transaction.amount > 0) {
           income += transaction.amount;
         }
